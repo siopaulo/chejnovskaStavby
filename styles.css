@@ -30,13 +30,13 @@ body { font-family: 'Inter', sans-serif; }
 }
 .nav-link:hover::after { width: 100%; }
 
-/* Mobilní menu odkazy */
+
 .nav-link-mobile {
     display: block;
     font-size: 1.2rem;
     font-weight: 500;
     color: #1d4ed8;
-    padding: 0.75rem 1.2rem;  /* Větší padding do stran */
+    padding: 0.75rem 1.2rem;  
     border-radius: 0.375rem;
     transition: background .2s, color .2s;
 }
@@ -45,7 +45,7 @@ body { font-family: 'Inter', sans-serif; }
     color: #2563eb;
 }
 
-/* Animace rozbalení menu */
+
 @keyframes slide-fade-down {
     from { opacity: 0; transform: translateY(-16px);}
     to   { opacity: 1; transform: translateY(0);}
@@ -55,7 +55,7 @@ body { font-family: 'Inter', sans-serif; }
 }
 
 
-/* Lightbox styles */
+
 .lightbox {
     display: none;
     position: fixed;
@@ -166,7 +166,7 @@ body { font-family: 'Inter', sans-serif; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Gallery grid improvements */
+
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -227,7 +227,7 @@ body { font-family: 'Inter', sans-serif; }
     transform: translateY(0);
 }
 
-/* Filter buttons */
+
 .filter-btn {
     background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
     border: 2px solid transparent;
@@ -247,7 +247,7 @@ body { font-family: 'Inter', sans-serif; }
     border-color: #3b82f6;
 }
 
-/* Masonry layout for larger screens */
+
 @media (min-width: 768px) {
     .gallery-masonry {
         columns: 2;
