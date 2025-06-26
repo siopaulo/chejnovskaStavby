@@ -25,7 +25,6 @@
     </section>
 
     <section class="max-w-7xl mx-auto py-16 px-4">
-        <!-- Filter buttons -->
         <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
             <button class="filter-btn active px-6 py-3 rounded-full font-semibold text-sm" data-filter="all">
                 Všechny práce
@@ -41,7 +40,6 @@
             </button>
         </div>
 
-        <!-- Gallery grid -->
         <div class="gallery-masonry" id="gallery-container">
             <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
                 <img src="img/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" alt="Moderní fasáda" loading="lazy">
@@ -197,7 +195,6 @@
         </div>
     </section>
 
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
             <button class="lightbox-close">&times;</button>
@@ -219,7 +216,6 @@
 <script src="loadComponents.js"></script>
 
 <script>
-    // Gallery functionality
     document.addEventListener('DOMContentLoaded', function() {
         const filterButtons = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
@@ -234,16 +230,13 @@
         let currentImageIndex = 0;
         let visibleImages = [];
 
-        // Filter functionality
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
 
-                // Update active button
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
-                // Filter items
                 galleryItems.forEach(item => {
                     const category = item.getAttribute('data-category');
                     if (filter === 'all' || category === filter) {
@@ -261,12 +254,10 @@
                     }
                 });
 
-                // Update visible images for lightbox
                 updateVisibleImages();
             });
         });
 
-        // Update visible images array
         function updateVisibleImages() {
             visibleImages = Array.from(galleryItems)
                 .filter(item => item.style.display !== 'none')
@@ -277,10 +268,8 @@
             lightboxTotal.textContent = visibleImages.length;
         }
 
-        // Initialize visible images
         updateVisibleImages();
 
-        // Open lightbox
         galleryItems.forEach((item, index) => {
             item.addEventListener('click', function() {
                 if (this.style.display === 'none') return;
@@ -299,7 +288,6 @@
             });
         });
 
-        // Close lightbox
         function closeLightbox() {
             lightbox.classList.remove('active');
             document.body.style.overflow = 'auto';
@@ -313,7 +301,6 @@
             }
         });
 
-        // Navigation
         function showImage(index) {
             if (index >= 0 && index < visibleImages.length) {
                 currentImageIndex = index;
@@ -331,7 +318,6 @@
             showImage(currentImageIndex < visibleImages.length - 1 ? currentImageIndex + 1 : 0);
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (!lightbox.classList.contains('active')) return;
 
@@ -348,7 +334,6 @@
             }
         });
 
-        // Lazy loading for better performance
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -364,7 +349,6 @@
             imageObserver.observe(img);
         });
 
-        // Add loading animation
         galleryItems.forEach(item => {
             const img = item.querySelector('img');
             img.addEventListener('load', function() {
