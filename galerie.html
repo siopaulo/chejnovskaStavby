@@ -8,7 +8,227 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-overlay { background: linear-gradient(135deg, rgba(30,58,138,0.85) 0%, rgba(59,130,246,0.75) 100%); }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            animation: zoomIn 0.3s ease-in-out;
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 24px;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-prev {
+            left: -70px;
+        }
+
+        .lightbox-next {
+            right: -70px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Gallery grid improvements */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            background: linear-gradient(145deg, #f3f4f6, #e5e7eb);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(59,130,246,0.1), rgba(99,102,241,0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Filter buttons */
+        .filter-btn {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #1e40af, #1e3a8a);
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        /* Masonry layout for larger screens */
+        @media (min-width: 768px) {
+            .gallery-masonry {
+                columns: 2;
+                column-gap: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-masonry {
+                columns: 3;
+                column-gap: 24px;
+            }
+        }
+
+        .gallery-masonry .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+
+        .gallery-masonry .gallery-item img {
+            aspect-ratio: auto;
+            height: auto;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 font-sans min-h-screen flex flex-col">
 <header class="bg-white shadow sticky top-0 z-50">
@@ -30,44 +250,427 @@
         </div>
     </nav>
 </header>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            <img src="img/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" alt="Realizace 1" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/3f0b21ef-4cbf-4e50-a613-87358cb77414.jpeg" alt="Realizace 2" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/177fd539-b6a7-4aad-8da9-3d86e83322a7.jpeg" alt="Realizace 3" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/a4568d91-de51-4f2e-a7bc-c4d35bf68022.jpeg" alt="Realizace 4" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/b439d739-2918-4106-bb9d-820011c12095.jpeg" alt="Realizace 5" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/c6e6473b-52e3-46c8-a5f7-585113593157.jpeg" alt="Realizace 6" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/e26c7afc-51c9-403a-960f-4162a374601b.jpeg" alt="Realizace 7" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/fcf1dd95-dc96-44bc-82c6-6c20db54d4f7.jpeg" alt="Realizace 8" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/fadada srn 11.jpg" alt="Fasada srn 11" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/Fasada Blovice 2.jpg" alt="Fasada Blovice 2" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/Fasáda Blovice 3.jpg" alt="Fasáda Blovice 3" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/fasada Blovice.jpg" alt="Fasada Blovice" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/fasada srn 10.jpg" alt="Fasada srn 10" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/Fasada srn 12.jpg" alt="Fasada srn 12" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/Fasada srn 13.jpg" alt="Fasada srn 13" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/fasada srn 14.jpg" alt="Fasada srn 14" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/srn rekonstrukce klima+tepelně izolační omítka 2.jpg" alt="Srn rekonstrukce klima+tepelně izolační omítka 2" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/srn rekonstrukce klima+tepelně izolační omítka 3.jpg" alt="Srn rekonstrukce klima+tepelně izolační omítka 3" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/srn rekonstrukce klima+tepelně izolační omítka.jpg" alt="Srn rekonstrukce klima+tepelně izolační omítka" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-            <img src="img/fadada srn 11.jpg" alt="Fasada srn 11" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
+
+<main class="flex-grow">
+    <section class="relative h-48 md:h-72">
+        <img src="img/fasada Blovice.jpg" alt="Galerie" class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-white text-3xl md:text-5xl font-bold mb-4" data-aos="fade-up">Galerie našich prací</h1>
+                <p class="text-white text-lg md:text-xl opacity-90" data-aos="fade-up" data-aos-delay="200">Profesionální fasády a zateplení</p>
+            </div>
         </div>
     </section>
 
-    </main>
+    <section class="max-w-7xl mx-auto py-16 px-4">
+        <!-- Filter buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button class="filter-btn active px-6 py-3 rounded-full font-semibold text-sm" data-filter="all">
+                Všechny práce
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full font-semibold text-sm" data-filter="fasady">
+                Fasády
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full font-semibold text-sm" data-filter="zatepleni">
+                Zateplení
+            </button>
+            <button class="filter-btn px-6 py-3 rounded-full font-semibold text-sm" data-filter="rekonstrukce">
+                Rekonstrukce
+            </button>
+        </div>
 
-    <footer class="bg-blue-900 text-gray-200 py-6 mt-12 mt-auto">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 gap-2">
-            <div>© 2025 FASAPOLYCZ s.r.o. | Všechna práva vyhrazena</div>
-            <div>
-                <span class="font-semibold">Kontakt: </span>
-                <a href="mailto:chejnovskyr@seznam.cz" class="underline">chejnovskyr@seznam.cz</a> |
-                <span>+420 775 976 677</span>
+        <!-- Gallery grid -->
+        <div class="gallery-masonry" id="gallery-container">
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" alt="Moderní fasáda" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Moderní fasáda</h3>
+                    <p class="text-xs opacity-90">Kompletní fasádní řešení</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="zatepleni" data-aos="zoom-in">
+                <img src="img/3f0b21ef-4cbf-4e50-a613-87358cb77414.jpeg" alt="Zateplení objektu" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Zateplení objektu</h3>
+                    <p class="text-xs opacity-90">Tepelná izolace s omítkou</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/177fd539-b6a7-4aad-8da9-3d86e83322a7.jpeg" alt="Fasádní systém" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasádní systém</h3>
+                    <p class="text-xs opacity-90">Kvalitní provedení</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rekonstrukce" data-aos="zoom-in">
+                <img src="img/a4568d91-de51-4f2e-a7bc-c4d35bf68022.jpeg" alt="Rekonstrukce fasády" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Rekonstrukce fasády</h3>
+                    <p class="text-xs opacity-90">Kompletní obnova</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/b439d739-2918-4106-bb9d-820011c12095.jpeg" alt="Fasáda Blovice" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda Blovice</h3>
+                    <p class="text-xs opacity-90">Rodinný dům</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="zatepleni" data-aos="zoom-in">
+                <img src="img/c6e6473b-52e3-46c8-a5f7-585113593157.jpeg" alt="Zateplení s omítkou" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Zateplení s omítkou</h3>
+                    <p class="text-xs opacity-90">Energeticky úsporné řešení</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/e26c7afc-51c9-403a-960f-4162a374601b.jpeg" alt="Fasádní práce" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasádní práce</h3>
+                    <p class="text-xs opacity-90">Precizní provedení</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rekonstrukce" data-aos="zoom-in">
+                <img src="img/fcf1dd95-dc96-44bc-82c6-6c20db54d4f7.jpeg" alt="Rekonstrukce objektu" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Rekonstrukce objektu</h3>
+                    <p class="text-xs opacity-90">Kompletní renovace</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/fadada srn 11.jpg" alt="Fasáda SRN 11" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Projekt v SRN</h3>
+                    <p class="text-xs opacity-90">Mezinárodní zkušenosti</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/Fasada Blovice 2.jpg" alt="Fasáda Blovice 2" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda Blovice 2</h3>
+                    <p class="text-xs opacity-90">Druhá etapa projektu</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/Fasáda Blovice 3.jpg" alt="Fasáda Blovice 3" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda Blovice 3</h3>
+                    <p class="text-xs opacity-90">Finální úpravy</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/fasada Blovice.jpg" alt="Fasáda Blovice" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda Blovice</h3>
+                    <p class="text-xs opacity-90">Referenční projekt</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/fasada srn 10.jpg" alt="Fasáda SRN 10" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Projekt v Německu</h3>
+                    <p class="text-xs opacity-90">Kvalitní provedení</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/Fasada srn 12.jpg" alt="Fasáda SRN 12" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda SRN 12</h3>
+                    <p class="text-xs opacity-90">Německý standard</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/Fasada srn 13.jpg" alt="Fasáda SRN 13" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda SRN 13</h3>
+                    <p class="text-xs opacity-90">Moderní design</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="fasady" data-aos="zoom-in">
+                <img src="img/fasada srn 14.jpg" alt="Fasáda SRN 14" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Fasáda SRN 14</h3>
+                    <p class="text-xs opacity-90">Pokročilé technologie</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rekonstrukce" data-aos="zoom-in">
+                <img src="img/srn rekonstrukce klima+tepelně izolační omítka 2.jpg" alt="Rekonstrukce s klimatickou omítkou" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Klimatická omítka</h3>
+                    <p class="text-xs opacity-90">Tepelná izolace</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rekonstrukce" data-aos="zoom-in">
+                <img src="img/srn rekonstrukce klima+tepelně izolační omítka 3.jpg" alt="Rekonstrukce s tepelnou izolací" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Tepelná izolace</h3>
+                    <p class="text-xs opacity-90">Kompletní rekonstrukce</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="rekonstrukce" data-aos="zoom-in">
+                <img src="img/srn rekonstrukce klima+tepelně izolační omítka.jpg" alt="Rekonstrukce s izolační omítkou" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3 class="font-bold text-sm mb-1">Izolační omítka</h3>
+                    <p class="text-xs opacity-90">Energetické úspory</p>
+                </div>
             </div>
         </div>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-nav lightbox-prev">&#10094;</button>
+            <img id="lightbox-img" src="" alt="">
+            <button class="lightbox-nav lightbox-next">&#10095;</button>
+            <div class="lightbox-counter">
+                <span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-gray-900 text-gray-300 py-12 mt-0">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-4">FASAPOLYCZ s.r.o.</h3>
+                <p class="mb-4">Profesionální fasády, omítky a zateplení. Kvalita a spolehlivost již více než 15 let.</p>
+                <div class="flex space-x-4">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.63 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </div>
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Rychlé odkazy</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Úvod</a></li>
+                    <li><a href="sluzby.html" class="hover:text-white transition-colors">Služby</a></li>
+                    <li><a href="galerie.html" class="hover:text-white transition-colors">Galerie</a></li>
+                    <li><a href="kontakt.html" class="hover:text-white transition-colors">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Kontakt</h4>
+                <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div>
+                            <div>Radek Chejnovský</div>
+                            <div>Dlouhý Újezd 174</div>
+                            <div>347 01 Tachov</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <a href="tel:+420775976677" class="hover:text-white transition-colors">+420 775 976 677</a>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <a href="mailto:chejnovskyr@seznam.cz" class="hover:text-white transition-colors">chejnovskyr@seznam.cz</a>
+                    </div>
+                    <div class="text-sm text-gray-400 mt-4">IČ: 01874543</div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p>© 2025 FASAPOLYCZ s.r.o. | Všechna práva vyhrazena</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+<script>
+    // Gallery functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCurrent = document.getElementById('lightbox-current');
+        const lightboxTotal = document.getElementById('lightbox-total');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+
+        let currentImageIndex = 0;
+        let visibleImages = [];
+
+        // Filter functionality
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                // Filter items
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+
+                // Update visible images for lightbox
+                updateVisibleImages();
+            });
+        });
+
+        // Update visible images array
+        function updateVisibleImages() {
+            visibleImages = Array.from(galleryItems)
+                .filter(item => item.style.display !== 'none')
+                .map(item => ({
+                    src: item.querySelector('img').src,
+                    alt: item.querySelector('img').alt
+                }));
+            lightboxTotal.textContent = visibleImages.length;
+        }
+
+        // Initialize visible images
+        updateVisibleImages();
+
+        // Open lightbox
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                if (this.style.display === 'none') return;
+
+                const img = this.querySelector('img');
+                const visibleIndex = Array.from(galleryItems)
+                    .filter(item => item.style.display !== 'none')
+                    .indexOf(this);
+
+                currentImageIndex = visibleIndex;
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCurrent.textContent = currentImageIndex + 1;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Navigation
+        function showImage(index) {
+            if (index >= 0 && index < visibleImages.length) {
+                currentImageIndex = index;
+                lightboxImg.src = visibleImages[currentImageIndex].src;
+                lightboxImg.alt = visibleImages[currentImageIndex].alt;
+                lightboxCurrent.textContent = currentImageIndex + 1;
+            }
+        }
+
+        lightboxPrev.addEventListener('click', function() {
+            showImage(currentImageIndex > 0 ? currentImageIndex - 1 : visibleImages.length - 1);
+        });
+
+        lightboxNext.addEventListener('click', function() {
+            showImage(currentImageIndex < visibleImages.length - 1 ? currentImageIndex + 1 : 0);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    lightboxPrev.click();
+                    break;
+                case 'ArrowRight':
+                    lightboxNext.click();
+                    break;
+            }
+        });
+
+        // Lazy loading for better performance
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.getAttribute('data-src') || img.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Add loading animation
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        });
+    });
+</script>
 </body>
 </html>
