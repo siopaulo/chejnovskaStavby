@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3211d56d-589f-4ed4-a74f-5c777b49cf43" name="Changes" comment="wip">
+    <list default="true" id="a9c60c8d-c0c4-4cd6-af35-405cf4913305" name="Changes" comment="wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/galerie.html" beforeDir="false" afterPath="$PROJECT_DIR$/galerie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sluzby.html" beforeDir="false" afterPath="$PROJECT_DIR$/sluzby.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +21,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "siopaulo"
-  }
-}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -37,16 +30,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="codex/upravit-index-a-stránky-podle-požadavků" />
-                    <option name="lastUsedInstant" value="1750903893" />
+                    <option name="branchName" value="codex/update-homepage-and-services-page" />
+                    <option name="lastUsedInstant" value="1750906943" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1750899827" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="codex/vytvořit-moderní-statické-stránky-s-tailwind" />
-                    <option name="lastUsedInstant" value="1750898374" />
+                    <option name="lastUsedInstant" value="1750906942" />
                   </RecentBranch>
                 </list>
               </option>
@@ -57,71 +46,15 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/siopaulo/chejnovskaStavby.git",
-    "accountId": "77828aef-9ba1-4e3d-8eaa-3f629ba7fcda"
-  }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
-  <component name="ProjectId" id="2z1PbEnnkJUlqilFki6N08POsPV" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JavaScript Debug.galerie.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.sluzby.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "codex/upravit-index-a-stránky-podle-požadavků",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/pauli/ChejnovskyBarak/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "#5 on codex/update-homepage-and-services-page",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="\\wsl.localhost\Ubuntu\home\pauli\ChejnovskyBarak\img" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="3211d56d-589f-4ed4-a74f-5c777b49cf43" name="Changes" comment="" />
-      <created>1750895675838</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1750895675838</updated>
-      <workItem from="1750895678048" duration="9174000" />
-    </task>
-    <task id="LOCAL-00001" summary="wip">
-      <option name="closed" value="true" />
-      <created>1750903418760</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1750903418760</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="wip" />
