@@ -5,13 +5,14 @@
     <title>FASAPOLYCZ s.r.o. – Fasády, omítky, zateplení</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50 font-sans min-h-screen flex flex-col">
 
 <!-- Header -->
 <header class="bg-white shadow sticky top-0 z-50">
@@ -25,6 +26,23 @@
         </nav>
     </div>
 </header>
+
+<main class="flex-grow">
+    <!-- Slider -->
+    <div class="swiper mySwiper w-full h-64 md:h-[480px]">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" class="w-full h-full object-cover" alt="Ukázka 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/3f0b21ef-4cbf-4e50-a613-87358cb77414.jpeg" class="w-full h-full object-cover" alt="Ukázka 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/177fd539-b6a7-4aad-8da9-3d86e83322a7.jpeg" class="w-full h-full object-cover" alt="Ukázka 3">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
 
 <!-- Úvod -->
 <section class="max-w-6xl mx-auto py-10 px-4">
@@ -56,35 +74,12 @@
     </div>
 </section>
 
-<!-- Galerie vybraných realizací -->
+<!-- Krátká ukázka -->
 <section class="max-w-6xl mx-auto py-12 px-4" id="galerie">
-    <h2 class="text-2xl font-bold mb-6 text-blue-900" data-aos="fade-right">Galerie realizací</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        <!-- Obrázky přesně dle názvů, které jsi poslal -->
-        <img src="img/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" alt="Realizace 1" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/3f0b21ef-4cbf-4e50-a613-87358cb77414.jpeg" alt="Realizace 2" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/177fd539-b6a7-4aad-8da9-3d86e83322a7.jpeg" alt="Realizace 3" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/a4568d91-de51-4f2e-a7bc-c4d35bf68022.jpeg" alt="Realizace 4" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/b439d739-2918-4106-bb9d-820011c12095.jpeg" alt="Realizace 5" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/c6e6473b-52e3-46c8-a5f7-585113593157.jpeg" alt="Realizace 6" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/e26c7afc-51c9-403a-960f-4162a374601b.jpeg" alt="Realizace 7" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/fcf1dd95-dc96-44bc-82c6-6c20db54d4f7.jpeg" alt="Realizace 8" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/f382b518-c0dc-483e-941c-dcd25ee6a320.png" alt="Realizace 9" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/Fasada Blovice 2.jpg" alt="Fasada Blovice 2" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/Fasáda Blovice 3.jpg" alt="Fasáda Blovice 3" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/fasada Blovice.jpg" alt="Fasada Blovice" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/fasada srn 10.jpg" alt="Fasada srn 10" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/Fasada srn 12.jpg" alt="Fasada srn 12" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/Fasada srn 13.jpg" alt="Fasada srn 13" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/fasada srn 14.jpg" alt="Fasada srn 14" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/srn rekonstrukce klima+tepelně izolační omítka 2.jpg" alt="Srn rekonstrukce klima+tepelně izolační omítka 2" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/srn rekonstrukce klima+tepelně izolační omítka 3.jpg" alt="Srn rekonstrukce klima+tepelně izolační omítka 3" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/srn rekonstrukce klima+tepelně izolační omítka.jpg" alt="Srn rekonstrukce klima+tepelně izolační omítka" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-        <img src="img/fadada srn 11.jpg" alt="Fadada srn 11" class="rounded-xl shadow hover:scale-105 transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-    </div>
-    <div class="mt-6 text-right">
-        <a href="galerie.html" class="text-blue-700 underline">Zobrazit více &rarr;</a>
-    </div>
+    <h2 class="text-2xl font-bold mb-6 text-blue-900" data-aos="fade-right">Ukázka realizací</h2>
+    <p class="mb-6" data-aos="fade-up">
+        Další fotografie najdete v <a href="galerie.html" class="text-blue-700 underline">galerii</a>.
+    </p>
 </section>
 
 <!-- Přehled služeb -->
@@ -112,10 +107,12 @@
     </div>
 </section>
 
+</main>
+
 <!-- Footer -->
-<footer class="bg-blue-900 text-gray-200 py-6 mt-12">
+<footer class="bg-blue-900 text-gray-200 py-6 mt-12 mt-auto">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 gap-2">
-        <div>© 2024 FASAPOLYCZ s.r.o. | Všechna práva vyhrazena</div>
+        <div>© 2025 FASAPOLYCZ s.r.o. | Všechna práva vyhrazena</div>
         <div>
             <span class="font-semibold">Kontakt: </span>
             <a href="mailto:chejnovskyr@seznam.cz" class="underline">chejnovskyr@seznam.cz</a> |
@@ -126,8 +123,14 @@
 
 <!-- Animace on scroll -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
 <script>
     AOS.init({ duration: 800, once: true });
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: '.swiper-pagination', clickable: true }
+    });
 </script>
 </body>
 </html>
