@@ -1,19 +1,42 @@
-<header class="sticky top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md shadow-md border-b border-blue-200">
-    <nav class="max-w-7xl mx-auto px-4 py-3">
-        <div class="flex flex-wrap items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">FASAPOLYCZ s.r.o.</a>
-            <button data-collapse-toggle="navbar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-50 transition-colors" aria-controls="navbar" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5h14a1 1 0 010 2H3a1 1 0 110-2zm0 4h14a1 1 0 010 2H3a1 1 0 110-2zm14 6H3a1 1 0 110-2h14a1 1 0 110 2z" clip-rule="evenodd"/></svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar">
-                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0">
-                    <li><a href="index.html" class="block py-2 px-4 text-blue-700 font-semibold hover:text-blue-600 transition-colors duration-300">Úvod</a></li>
-                    <li><a href="sluzby.html" class="block py-2 px-4 text-blue-700 hover:text-blue-600 transition-colors duration-300">Služby</a></li>
-                    <li><a href="galerie.html" class="block py-2 px-4 text-blue-700 hover:text-blue-600 transition-colors duration-300">Galerie</a></li>
-                    <li><a href="kontakt.html" class="block py-2 px-4 text-blue-700 hover:text-blue-600 transition-colors duration-300">Kontakt</a></li>
-                </ul>
-            </div>
+<header id="site-header"
+        class="fixed inset-x-0 top-0 z-50 h-[4.5rem] bg-white/70 backdrop-blur-md shadow-lg">
+    <nav class="h-full max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-700 via-blue-500 to-indigo-500
+              bg-clip-text text-transparent opacity-90 hover:opacity-100 transition-opacity duration-200">
+            FASAPOLYCZ s.r.o.
+        </a>
+
+        <!-- Mobile burger -->
+        <button id="navbar-toggle" type="button"
+                class="md:hidden p-3 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-200"
+                aria-controls="mobile-navbar" aria-expanded="false">
+            <span class="sr-only">Otevřít menu</span>
+            <svg class="w-6 h-6 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                      d="M3 5h14a1 1 0 010 2H3a1 1 0 110-2zm0 4h14a1 1 0 010 2H3a1 1 0 110-2zm14 6H3a1 1 0 110-2h14a1 1 0 110 2z"
+                      clip-rule="evenodd"/>
+            </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <div id="navbar" class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link">Úvod</a>
+            <a href="sluzby.html" class="nav-link">Služby</a>
+            <a href="galerie.html" class="nav-link">Galerie</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
         </div>
     </nav>
+
+    <!-- Mobilní menu pod headerem -->
+    <div id="mobile-navbar"
+         class="md:hidden fixed top-[4.5rem] inset-x-0 bg-white/95 shadow-lg border-t border-blue-100 z-40 pointer-events-none opacity-0 transform -translate-y-4 transition-all duration-200">
+        <div class="flex flex-col py-4 space-y-2 px-4 animate-none">
+            <a href="index.html" class="nav-link-mobile">Úvod</a>
+            <a href="sluzby.html" class="nav-link-mobile">Služby</a>
+            <a href="galerie.html" class="nav-link-mobile">Galerie</a>
+            <a href="kontakt.html" class="nav-link-mobile">Kontakt</a>
+        </div>
+    </div>
 </header>

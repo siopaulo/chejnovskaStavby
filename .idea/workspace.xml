@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9c60c8d-c0c4-4cd6-af35-405cf4913305" name="Changes" comment="wip">
+    <list default="true" id="fd052509-b803-4927-bced-3d4b37feb5eb" name="Changes" comment="wip">
+      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/galerie.html" beforeDir="false" afterPath="$PROJECT_DIR$/galerie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kontakt.html" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loadComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/loadComponents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sluzby.html" beforeDir="false" afterPath="$PROJECT_DIR$/sluzby.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,10 +22,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="codex/vylepšit-header-a-footer-pro-konzistentnost" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -30,12 +37,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="codex/update-homepage-and-services-page" />
-                    <option name="lastUsedInstant" value="1750906943" />
+                    <option name="branchName" value="codex/udělej-sticky-header-a-optimalizuj-index-stránku" />
+                    <option name="lastUsedInstant" value="1750909814" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1750906942" />
+                    <option name="branchName" value="codex/vylepšit-header-a-footer-pro-konzistentnost" />
+                    <option name="lastUsedInstant" value="1750909531" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="codex/přidat-animace-na-index-stránku" />
+                    <option name="lastUsedInstant" value="1750909530" />
                   </RecentBranch>
                 </list>
               </option>
@@ -48,12 +59,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.header.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
-    "git-widget-placeholder": "#5 on codex/update-homepage-and-services-page",
+    "JavaScript Debug.sluzby.html.executor": "Run",
+    "git-widget-placeholder": "codex/udělej-sticky-header-a-optimalizuj-index-stránku",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="wip">
+      <option name="closed" value="true" />
+      <created>1750908893112</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750908893112</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
