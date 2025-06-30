@@ -13,23 +13,13 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        :root {
-            --ticker-height: 2rem;
-            --header-offset: var(--ticker-height);
-        }
-    </style>
-
 </head>
 <body class="bg-gray-50 font-sans min-h-screen flex flex-col overflow-x-hidden">
 
-<div id="news-ticker" class="fixed inset-x-0 top-0 z-60 bg-blue-600 text-white text-center overflow-hidden">
-    <div class="ticker whitespace-nowrap">Sháníme spolehlivého řidiče + stavebního dělníka na plný úvazek..</div>
-</div>
 
 <div id="header-placeholder"></div>
 
-<main class="flex-grow" style="padding-top: calc(4.5rem + var(--ticker-height));">
+<main class="flex-grow pt-[4.5rem]">
     <div class="relative">
         <div class="swiper mySwiper w-full h-80 md:h-[600px] relative overflow-hidden" data-aos="fade-up">
             <div class="swiper-wrapper">
@@ -66,6 +56,12 @@
             <div class="swiper-button-prev text-white/80 hover:text-white transition-colors"></div>
         </div>
     </div>
+    <section class="bg-yellow-100 py-4">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+            <p class="font-medium text-gray-800">Sháníme spolehlivého řidiče + stavebního dělníka na plný úvazek. Ozvěte se nám!</p>
+        </div>
+    </section>
+
 
     <section class="relative py-20 px-4 gradient-bg">
         <div class="max-w-6xl mx-auto relative z-10">
