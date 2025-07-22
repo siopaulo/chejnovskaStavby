@@ -5,13 +5,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd052509-b803-4927-bced-3d4b37feb5eb" name="Changes" comment="wip">
-      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aktuality.html" beforeDir="false" afterPath="$PROJECT_DIR$/aktuality.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cenik.html" beforeDir="false" afterPath="$PROJECT_DIR$/cenik.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/galerie.html" beforeDir="false" afterPath="$PROJECT_DIR$/galerie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/gallery-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generateGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/generateGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Interiér/interiér.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/interier/interier.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/IzolacniOmitka/srn rekonstrukce klima+tepelně izolační omítka 2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/izolacniOmitka/sr2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/IzolacniOmitka/srn rekonstrukce klima+tepelně izolační omítka 3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/izolacniOmitka/srnrekonstrukceklimatepelnzolačnomka 3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/IzolacniOmitka/srn rekonstrukce klima+tepelně izolační omítka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/izolacniOmitka/sr3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/10.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/10.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/11.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/11.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/12.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/12.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/13.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/13.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/14.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/14.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/15.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/15.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/16.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/16.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/17.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/17.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/18.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/18.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/19.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/19.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/20.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/20.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/21.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/21.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/22.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/22.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/23.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/23.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/24.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/24.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/25.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/25.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/26.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/26.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/27.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/27.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/28.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/28.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/29.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/29.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/30.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/30.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/31.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/31.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/32.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/32.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/33.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/33.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/34.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/34.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/35.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/35.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/36.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/36.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/37.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/37.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/38.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/38.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/39.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/39.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/40.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/40.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/41.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/41.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/42.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/42.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/43.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/43.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/44.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/44.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/45.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/45.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/46.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/46.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/47.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/47.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/48.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/48.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/49.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/49.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/5.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/50.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/50.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/51.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/51.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/52.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/52.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/53.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/53.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/54.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/54.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/55.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/55.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/56.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/56.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/57.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/57.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/58.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/58.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/6.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/8.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/8.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Materiály/9.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/materiály/9.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/177fd539-b6a7-4aad-8da9-3d86e83322a7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/177fd539-b6a7-4aad-8da9-3d86e83322a7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/1c57803c-9330-45b7-9f4b-2c539990d6e9.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/3f0b21ef-4cbf-4e50-a613-87358cb77414.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/3f0b21ef-4cbf-4e50-a613-87358cb77414.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/Fasada Blovice 2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/FasadaBlovice2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/Fasada srn 12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/Fasadasrn12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/Fasada srn 13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/Fasadasrn13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/Fasáda Blovice 3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/FasadaBlovice 3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/a4568d91-de51-4f2e-a7bc-c4d35bf68022.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/a4568d91-de51-4f2e-a7bc-c4d35bf68022.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/b439d739-2918-4106-bb9d-820011c12095.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/b439d739-2918-4106-bb9d-820011c12095.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/c6e6473b-52e3-46c8-a5f7-585113593157.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/c6e6473b-52e3-46c8-a5f7-585113593157.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/e26c7afc-51c9-403a-960f-4162a374601b.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/e26c7afc-51c9-403a-960f-4162a374601b.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/fadada srn 11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/fadadasrn11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/fasada Blovice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/fasadaBlovice.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/fasada srn 10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/fasadasrn10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/fasada srn 14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/fasadasrn14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/fasády/fcf1dd95-dc96-44bc-82c6-6c20db54d4f7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/fasady/fcf1dd95-dc96-44bc-82c6-6c20db54d4f7.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kontakt.html" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/loadComponents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sluzby.html" beforeDir="false" afterPath="$PROJECT_DIR$/sluzby.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +101,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="codex/vylepšit-header-a-footer-pro-konzistentnost" />
+        <entry key="$PROJECT_DIR$" value="codex/predelat-galerii-podle-kategorii" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "siopaulo"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -36,6 +121,14 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1753209088" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="codex/predelat-galerii-podle-kategorii" />
+                    <option name="lastUsedInstant" value="1753203100" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="codex/udělej-sticky-header-a-optimalizuj-index-stránku" />
                     <option name="lastUsedInstant" value="1750909814" />
@@ -57,15 +150,45 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/siopaulo/chejnovskaStavby.git",
+    "accountId": "77828aef-9ba1-4e3d-8eaa-3f629ba7fcda"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="30EqPcLvbcVqL2fXIkPx7Rq2kb3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.galerie.html.executor": "Run",
     "JavaScript Debug.header.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.sluzby.html.executor": "Run",
-    "git-widget-placeholder": "codex/udělej-sticky-header-a-optimalizuj-index-stránku",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="wip">
       <option name="closed" value="true" />
@@ -75,8 +198,30 @@
       <option name="project" value="LOCAL" />
       <updated>1750908893112</updated>
     </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd052509-b803-4927-bced-3d4b37feb5eb" name="Changes" comment="wip" />
+      <created>1753203064849</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753203064849</updated>
+      <workItem from="1753203066320" duration="2467000" />
+    </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="wip" />

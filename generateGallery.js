@@ -2,11 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const categories = {
-  fasady: 'fasády',
+  fasady: 'fasady',
   koupelny: 'koupelny',
-  materialy: 'Materiály',
-  interier: 'Interiér',
-  izolacni: 'IzolacniOmitka',
+  materialy: 'materialy',
+  interier: 'interier',
+  izolacni: 'izolacniOmitka',
 };
 
 const exts = ['.jpg', '.jpeg', '.png'];
